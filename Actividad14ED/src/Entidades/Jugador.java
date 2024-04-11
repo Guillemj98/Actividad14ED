@@ -48,7 +48,7 @@ public class Jugador {
 	/**
 	 * Método que establece el dorsal. El metodo establecera el dorsal pasado 
 	 * por parametro cuando este sea mayor o igual a 1 y menor o igual a 30.
-	 * Si no cumple la condicion anterior, restará 1 al dorsal del objeto Jugador
+	 * Si no cumple la condicion anterior, establecera el valor a -1.
 	 * 
 	 * @param dorsal Representa el dorsal del jugador
 	 * @author Carlos Gómez
