@@ -72,9 +72,9 @@ public class Jugador {
 	/**
 	 * Método que devuelve si un jugador esta expulsado o no.
 	 * 
-	 * @return <li>El método devuleve true si:</li>
-	 * <ul>El numero de tarjetas amarillas es igual a dos</ul>
-	 * <ul>El numero de tarjetas rojas es igual a uno</ul>
+	 * @return El método devuleve true si:
+	 * <li>El numero de tarjetas amarillas es igual a dos</li>
+	 * <li>El numero de tarjetas rojas es igual a uno</li>
 	 * 
 	 * @author Carlos Gómez
 	 * @version 1.0
