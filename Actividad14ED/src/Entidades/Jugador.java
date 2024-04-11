@@ -4,7 +4,7 @@ package Entidades;
  * (dorsal, numeroTarjetasAmarillas y numeroTarjetasRojas)
  * y 2 métodos: 
  * <ul>
- *  <li>Imprime el numero del dorsal del objeto jugador</li>
+ *  <li>Establece el numero del dorsal del objeto jugador</li>
  *  <li>Devuelve si esta expulsado o no</li>
  *  </ul>
  * @author Guillermito

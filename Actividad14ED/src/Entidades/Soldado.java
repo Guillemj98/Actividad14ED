@@ -23,9 +23,6 @@ public class Soldado {
 	 */
 	private int numeroBalas;
 
-	public boolean isEstaMuerto() {
-		return estaMuerto;
-	}
 
 	public void setEstaMuerto(boolean estaMuerto) {
 		this.estaMuerto = estaMuerto;
@@ -34,7 +31,11 @@ public class Soldado {
 	public int getNumeroBalas() {
 		return numeroBalas;
 	}
-
+	
+	
+	public boolean isEstaMuerto() {
+		return estaMuerto;
+	}
 	public void setNumeroBalas(int numeroBalas) {
 		this.numeroBalas = numeroBalas;
 	}
