@@ -1,51 +1,104 @@
 package Entidades;
 
+/**
+ * Clase que representa un jugador con tres atributos(dorsal, 
+ * numeroTarjetasAmarillas y numeroTarjetasRojas).
+ * 
+ * @author Carlos Gómez
+ */
+
 public class Jugador {
-	 private int dorsal;
+	/**
+	 * Dorsal del jugador
+	 */
+	private int dorsal;
+	/**
+	 * Numero de tarjetas amarillas que tiene el jugador
+	 */
+	private int numeroTarjetasAmarillas;
+	/**
+	 * Numero de tarjetas rojas que tiene el jugador
+	 */
+	private int numeroTarjetasRojas;
+	
+	public int getDorsal() {
+		return dorsal;
+	}
 
-     private int numeroTarjetasAmarillas;
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
 
-     private int numeroTarjetasRojas;
+	public int getNumeroTarjetasAmarillas() {
+		return numeroTarjetasAmarillas;
+	}
 
-                  
+	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas) {
+		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+	}
 
-//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
+	public int getNumeroTarjetasRojas() {
+		return numeroTarjetasRojas;
+	}
 
+	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
+		this.numeroTarjetasRojas = numeroTarjetasRojas;
+	}
+	
+	/**
+	 * Método que establece el dorsal. El metodo establecera el dorsal pasado 
+	 * por parametro cuando este sea mayor o igual a 1 y menor o igual a 30.
+	 * Si no cumple la condicion anterior, restará 1 al dorsal del objeto Jugador
+	 * 
+	 * @param dorsal Representa el dorsal del jugador
+	 * @author Carlos Gómez
+	 * @version 1.0
+	 */
 
+	public void ponerDorsal(int dorsal) {
 
-     public void ponerDorsal(int dorsal) {
+		if (dorsal >= 1 && dorsal <= 30) {
 
-                   if(dorsal >= 1 && dorsal <= 30) {
+			this.dorsal = dorsal;
 
-                                 this.dorsal = dorsal;
+		} else {
 
-                   }else {
+			this.dorsal = -1;
 
-                                 this.dorsal = -1;
+		}
 
-                   }
+	}
+	
+	/**
+	 * Método que devuelve si un jugador esta expulsado o no.
+	 * 
+	 * @return <li>El método devuleve true si:</li>
+	 * <ul>El numero de tarjetas amarillas es igual a dos</ul>
+	 * <ul>El numero de tarjetas rojas es igual a uno</ul>
+	 * 
+	 * @author Carlos Gómez
+	 * @version 1.0
+	 */
 
-     }
+	public boolean estaExpulsado() {
 
-    
+		boolean expulsado = false;
 
-     public boolean estaExpulsado() {
+		if (numeroTarjetasAmarillas == 2) {
 
-                   boolean expulsado = false;                                                  
+			expulsado = true;
 
-                   if(numeroTarjetasAmarillas == 2) {
+		}
 
-                                 expulsado = true;
+		if (numeroTarjetasRojas == 1) {
 
-                   }                          
+			expulsado = true;
 
-                   if(numeroTarjetasRojas == 1) {
+		}
 
-                                 expulsado = true;
+		return expulsado;
 
-                   }                          
+	}
 
-                   return expulsado;
-
-     }            
+	
 }
