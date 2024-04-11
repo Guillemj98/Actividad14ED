@@ -8,7 +8,8 @@ package Entidades;
  *  <li>Devuelve si esta expulsado o no</li>
  *  </ul>
  * @author Guillermito
- * @version 17.0
+ * @version 1.0
+ * @since 17.0
  * 
  */
 public class Jugador {
