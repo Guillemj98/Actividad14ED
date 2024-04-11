@@ -6,7 +6,6 @@ public class MainClases {
 		
 		Soldado sol = new Soldado();
 		
-		sol.pued
 
 	}
 
