@@ -1,23 +1,27 @@
 package Entidades;
-
 /**
- * Clase que representa un jugador con tres atributos(dorsal, 
- * numeroTarjetasAmarillas y numeroTarjetasRojas).
+ * Clase Jugador para crear Objetos Jugador.
+ * <br>
+ * El Objeto Jugador tendrá como Atributos:
+ * - dorsal, numero de dorsal que tiene el Objeto Jugador.
+ * - numeroTarjetasAmarillas, cantidad de tarjetas Amarillas que tiene el Objeto Jugador.
+ * -numeroTarjetasRojas, cantidad de tarjetas Rojas que tiene el Objeto Jugador.
  * 
- * @author Carlos Gómez
+ * El Objeto Jugador tendrá como Metodos:
+ * - ponerDorsal()
+ * - estaExpulsado()
  */
-
 public class Jugador {
 	/**
-	 * Dorsal del jugador
+	 * Atributo que determina el numero del dorsal del jugador
 	 */
 	private int dorsal;
 	/**
-	 * Numero de tarjetas amarillas que tiene el jugador
+	 * Atributo que indica el numero de tarjetas amarillas
 	 */
 	private int numeroTarjetasAmarillas;
 	/**
-	 * Numero de tarjetas rojas que tiene el jugador
+	 * Atributo que indica el numero de tarjetas rojas
 	 */
 	private int numeroTarjetasRojas;
 	
@@ -44,61 +48,35 @@ public class Jugador {
 	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
 		this.numeroTarjetasRojas = numeroTarjetasRojas;
 	}
-	
-	/**
-	 * Método que establece el dorsal. El metodo establecera el dorsal pasado 
-	 * por parametro cuando este sea mayor o igual a 1 y menor o igual a 30.
-	 * Si no cumple la condicion anterior, establecera el valor a -1.
-	 * 
-	 * @param dorsal Representa el dorsal del jugador
-	 * @author Carlos Gómez
-	 * @version 1.0
-	 */
 
+	/**
+	 * Método que establece el <b>dorsal</b> del jugador comprendido entre los valores
+	 * <b>1 y 30 (incluidos)</b> y en caso contrario lo establece a (-1)
+	 * @param dorsal numero que introducimos por parámetro
+	 */
 	public void ponerDorsal(int dorsal) {
-
 		if (dorsal >= 1 && dorsal <= 30) {
-
 			this.dorsal = dorsal;
-
 		} else {
-
 			this.dorsal = -1;
-
 		}
-
 	}
-	
 	/**
-	 * Método que devuelve si un jugador esta expulsado o no.
+	 * El método estaExpulsado devuelve true si el jugador cumple con las
+	 * condiciones para ser expulsado y false si no las cumple.
 	 * 
-	 * @return El método devuleve true si:
-	 * <li>El numero de tarjetas amarillas es igual a dos</li>
-	 * <li>El numero de tarjetas rojas es igual a uno</li>
-	 * 
-	 * @author Carlos Gómez
-	 * @version 1.0
+	 * @return <b>true</b>, si el atributo numeroTarjetasAmarillas tiene valor
+	 * 2 o si el atributo numeroTarjetasRojas tiene valor 1; o devuelve
+	 * <b>false</b>, si no se cumplen ninguna de estas condiciones.
 	 */
-
 	public boolean estaExpulsado() {
-
 		boolean expulsado = false;
-
 		if (numeroTarjetasAmarillas == 2) {
-
 			expulsado = true;
-
 		}
-
 		if (numeroTarjetasRojas == 1) {
-
 			expulsado = true;
-
 		}
-
 		return expulsado;
-
 	}
-
-	
 }

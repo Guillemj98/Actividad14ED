@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"Entidades","l":"Jugador"},{"p":"Entidades","l":"MainClases"},{"p":"Entidades","l":"Soldado"}];updateSearchResults();
