@@ -74,6 +74,7 @@ public class Jugador {
 		if (numeroTarjetasAmarillas == 2) {
 			expulsado = true;
 		}
+		
 		if (numeroTarjetasRojas == 1) {
 			expulsado = true;
 		}

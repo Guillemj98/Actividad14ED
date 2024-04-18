@@ -6,7 +6,7 @@ public class MainClases {
 		
 		
 		/*
-		 * PRUEBA 1 puedeDisparar()
+		 * PRUEBA SOLDADO 1 puedeDisparar()
 		 * 
 		 * int balas = 2
 		 * boolean resultadoEsperado = true;
@@ -26,7 +26,7 @@ public class MainClases {
 		
 		
 		/*
-		 * PRUEBA 2 puedeDisparar()
+		 * PRUEBA SOLDADO 2 puedeDisparar()
 		 * 
 		 * int balas = -2
 		 * boolean resultadoEsperado = false;
@@ -48,7 +48,7 @@ public class MainClases {
 		
 		
 		/*
-		 * PRUEBA 3 puedeDisparar()
+		 * PRUEBA SOLDADO 3 puedeDisparar()
 		 * 
 		 * int balas = 0
 		 * boolean resultadoEsperado = false;
@@ -69,7 +69,7 @@ public class MainClases {
 		}
 		
 		/*
-		 * PRUEBA 1 disparar(Soldado sol)
+		 * PRUEBA SOLDADO 1 disparar(Soldado sol)
 		 * 
 		 * int balas = 2;
 		 * int resultadoBalasEsperado = 1;
@@ -78,6 +78,7 @@ public class MainClases {
 		
 		Soldado s4 = new Soldado(); 
 		Soldado s4Objetivo = new Soldado();
+		
 		int balas4 = 2;
 		int resultadoBalasEsperado = 1;
 		boolean resultadoEsperadoSolEstaMuerto = true;
@@ -104,10 +105,10 @@ public class MainClases {
 		
 		
 		/*
-		 * PRUEBA 2 disparar(Soldado sol)
+		 * PRUEBA SOLDADO 2 disparar(Soldado sol)
 		 * 
-		 * int balas = 2;
-		 * int resultadoBalasEsperado = 1;
+		 * int balas = -2;
+		 * int resultadoBalasEsperado = -3;
 		 * boolean resultadoSolEstaMuerto = true;
 		 */
 		
@@ -137,11 +138,139 @@ public class MainClases {
 			System.out.println("KO");
 		}
 		
+		/*
+		 * 
+		 * PRUEBA JUGADOR 1 ponerDorsal()
+		 * 
+		 * int dorsal1 = 9;
+		 * int dorsalEsperado1 = 9;
+		 */
+		
+		Jugador j1 = new Jugador();
+		int dorsal1 = 9;
+		int dorsalEsperado1 = 9;
+		
+		j1.ponerDorsal(dorsal1);
+		
+		int dorsalObtenido1 = j1.getDorsal();
+		
+		if(dorsalEsperado1 == dorsalObtenido1) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
 		
 		
+		/*
+		 * 
+		 * PRUEBA JUGADOR 2 ponerDorsal()
+		 * 
+		 * int dorsal2 = 31;
+		 * int dorsalEsperado2 = -1;
+		 */
 		
+		Jugador j2 = new Jugador();
+		int dorsal2 = 31;
+		int dorsalEsperado2 = -1;
 		
+		j2.ponerDorsal(dorsal2);
 		
+		int dorsalObtenido2 = j2.getDorsal();
+		
+		if(dorsalEsperado2 == dorsalObtenido2) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
+		
+		/*
+		 * PRUEBA JUGADOR 1 estaExpulsado()
+		 * 
+		 * int tarjetasAmarillas = 2;
+		 * 
+		 * boolean resultadoEsperado = true;
+		 */
+		int tarjetasAmarillas3 = 2;
+		resultadoEsperado3 = true;
+		
+		Jugador j3 = new Jugador();
+		
+		j3.setNumeroTarjetasAmarillas(tarjetasAmarillas3);
+		
+		resultadoObtenido3 = j3.estaExpulsado();
+		
+		if(resultadoEsperado3 == resultadoObtenido3) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
+		
+		/*
+		 * PRUEBA JUGADOR 2 estaExpulsado()
+		 * 
+		 * int tarjetasAmarillas3 = 1;
+		 * 
+		 * boolean resultadoEsperado3 = false;
+		 */
+		tarjetasAmarillas3 = 1;
+		resultadoEsperado3 = false;
+		
+		Jugador j4 = new Jugador();
+		
+		j4.setNumeroTarjetasAmarillas(tarjetasAmarillas3);
+		
+		resultadoObtenido3 = j4.estaExpulsado();
+		
+		if(resultadoEsperado3 == resultadoObtenido3) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
+		
+		/*
+		 * PRUEBA JUGADOR 2 estaExpulsado()
+		 * 
+		 * int tarjetasRojas = 1;
+		 * 
+		 * boolean resultadoEsperado3 = true;
+		 */
+		int tarjetasRojas = 1;
+		resultadoEsperado3 = true;
+		
+		Jugador j5 = new Jugador();
+		
+		j5.setNumeroTarjetasRojas(tarjetasRojas);
+		
+		resultadoObtenido3 = j5.estaExpulsado();
+		
+		if(resultadoEsperado3 == resultadoObtenido3) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
+		
+		/*
+		 * PRUEBA JUGADOR 2 estaExpulsado()
+		 * 
+		 * int tarjetasRojas = 0;
+		 * 
+		 * boolean resultadoEsperado3 = false;
+		 */
+		
+		tarjetasRojas = 0;
+		resultadoEsperado3 = false;
+		
+		Jugador j6 = new Jugador();
+		
+		j6.setNumeroTarjetasRojas(tarjetasRojas);
+		
+		resultadoObtenido3 = j6.estaExpulsado();
+		
+		if(resultadoEsperado3 == resultadoObtenido3) {
+			System.out.println("OK");
+		}else {
+			System.out.println("KO");
+		}
 		
 		
 		
