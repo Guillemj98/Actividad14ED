@@ -124,6 +124,58 @@ public class MainClases {
 			System.out.println("Prueba 5 estaExpulsado(): -->KO");
 		}
 		
+		// Pruebas unitarias de Soldado
+		// Prueba unitaria del método puedeDisparar();
+		
+		// Prueba 1:
+		// int numeroBalas = 2;
+		// boolean resultadoEsperadoSoldado = true;
+		Soldado s1 = new Soldado();
+		int numeroBalas =2;
+		s1.setNumeroBalas(numeroBalas);
+		boolean puedeDisparar = s1.puedeDisparar();
+		boolean resultadoEsperadoSoldado = true;
+		if(puedeDisparar ==resultadoEsperadoSoldado ) {
+			System.out.println("Prueba 1 puedeDispara(): -->OK" );
+		}else {
+			System.out.println("Prueba 1 puedeDispara(): -->KO" );
+		}
+		
+		
+		// Prueba 2:
+		// int numeroBalas = 0;
+		// boolean resultadoEsperadoSoldado = false;
+		Soldado s2 = new Soldado();
+		numeroBalas =0;
+		s2.setNumeroBalas(numeroBalas);
+		puedeDisparar = s2.puedeDisparar();
+		resultadoEsperadoSoldado = false;
+		if(puedeDisparar ==resultadoEsperadoSoldado ) {
+			System.out.println("Prueba 2 puedeDispara(): -->OK" );
+		}else {
+			System.out.println("Prueba 2 puedeDispara(): -->KO" );
+		}
+		
+		// Pruebas unitarias de Soldado
+		// Prueba unitaria del método disparar(soldado sol);
+		
+		// Prueba 1:
+		// int numeroBalas = 2;
+		// int resultadoBalas = 1;
+		// boolean resultadoEstaMuerto = true;
+		Soldado s3 = new Soldado();
+		Soldado soldado1 = new Soldado();
+		numeroBalas = 2;
+		int resultadoBalas = 1;
+		s3.setNumeroBalas(numeroBalas);
+		boolean resultadoEstaMuerto = true;
+		
+		// Prueba 2:
+		// int numeroBalas = 0;
+		// int resultadoBalas = -1;
+		// boolean resultadoEstaMuerto = true;
+		Soldado s4 = new Soldado();
+		Soldado soldado2 = new Soldado();
 	}
 
 }
