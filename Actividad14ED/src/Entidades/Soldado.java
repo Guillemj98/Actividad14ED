@@ -1,17 +1,26 @@
 package Entidades;
 
 /**
- * Esta clase define objetos (soldado), el cual contiene 2 atributos (estaMuerto
- * y numeroBalas) Tambien tiene 2 métodos :
- * <ul>
- * <li>Devuelve si puede disparar o no</li>
- * <li>Reduce el numero de balas y establece estaMuerto a false de un soldado
- * pasado por parametro</li>
- * </ul>
- * 
- * @author Guillermito
+ * Clase Soldado para crear un Objeto Soldado que tiene como atributos:
+ * <br>
+ * - <b>'estaMuerto'</b> con posible valor 'true' si el Soldado esta vivo
+ *  <br> ó 'false' si el Soldado esta muerto.
+ *  <br>
+ * - <b>'numeroBalas'</b> que tendrá el valor de la cantidad de balas que 
+ * puede utilizar el Soldado.
+ * <br>
+ * El Objeto Soldado tendrá los metodos:
+ * <br><b>
+ * - puedeDisparar()
+ * <br>
+ * - isEstaMuerto()
+ * <br>
+ * - disparar(Soldado sol)
+ * </b>
+ * @author Piero
  * @version 1.0
- * @since 17.0
+ * 
+ * 
  */
 public class Soldado {
 	/**

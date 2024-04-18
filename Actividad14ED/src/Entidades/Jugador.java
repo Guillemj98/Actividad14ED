@@ -1,16 +1,15 @@
 package Entidades;
 /**
- * Esta clase define objetos (jugador) que contienen 3 atributos
- * (dorsal, numeroTarjetasAmarillas y numeroTarjetasRojas)
- * y 2 métodos: 
- * <ul>
- *  <li>Establece el numero del dorsal del objeto jugador</li>
- *  <li>Devuelve si esta expulsado o no</li>
- *  </ul>
- * @author Guillermito
- * @version 1.0
- * @since 17.0
+ * Clase Jugador para crear Objetos Jugador.
+ * <br>
+ * El Objeto Jugador tendrá como Atributos:
+ * - dorsal, numero de dorsal que tiene el Objeto Jugador.
+ * - numeroTarjetasAmarillas, cantidad de tarjetas Amarillas que tiene el Objeto Jugador.
+ * -numeroTarjetasRojas, cantidad de tarjetas Rojas que tiene el Objeto Jugador.
  * 
+ * El Objeto Jugador tendrá como Metodos:
+ * - ponerDorsal()
+ * - estaExpulsado()
  */
 public class Jugador {
 	/**
@@ -63,12 +62,12 @@ public class Jugador {
 		}
 	}
 	/**
-	 * Método que devuelve si el jugador esta expulsado o no.
-	 * Determina si el jugador esta expulsado, si el número de 
-	 * amarillas es igual a 2 o el numero de rojas es igual 1, 
-	 * en caso contrario devuelve false
-	 * @return devuelve false si el jugador no tiene 2 amarillas o una tarjeta roja,
-	 * en caso contrario devuelve true.
+	 * El método estaExpulsado devuelve true si el jugador cumple con las
+	 * condiciones para ser expulsado y false si no las cumple.
+	 * 
+	 * @return <b>true</b>, si el atributo numeroTarjetasAmarillas tiene valor
+	 * 2 o si el atributo numeroTarjetasRojas tiene valor 1; o devuelve
+	 * <b>false</b>, si no se cumplen ninguna de estas condiciones.
 	 */
 	public boolean estaExpulsado() {
 		boolean expulsado = false;
