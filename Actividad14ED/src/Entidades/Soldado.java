@@ -1,87 +1,83 @@
 package Entidades;
 
-
 /**
- * La clase soldado es un molde para crear el objeto Soldado.
+ * Clase Soldado para crear un Objeto Soldado que tiene como atributos:
+ * <br>
+ * - <b>'estaMuerto'</b> con posible valor 'true' si el Soldado esta vivo
+ *  <br> ó 'false' si el Soldado esta muerto.
+ *  <br>
+ * - <b>'numeroBalas'</b> que tendrá el valor de la cantidad de balas que 
+ * puede utilizar el Soldado.
+ * <br>
+ * El Objeto Soldado tendrá los metodos:
+ * <br><b>
+ * - puedeDisparar()
+ * <br>
+ * - isEstaMuerto()
+ * <br>
+ * - disparar(Soldado sol)
+ * </b>
+ * @author Piero
+ * @version 1.0
  * 
- * En él tendremos los siguientes <b>atributos</b>.
- * <ul>
- * <li>estaMuerto</li>
- * <li>numeroBalas</li>
- * </ul>
+ * 
  */
 public class Soldado {
-
-	
 	/**
-	 * Contiene el valor booleano si el soldado está muerto (true) o no (false)
+	 * Atributo de tipo boolean el cual determina si el objeto esta vivo o muerto
 	 */
-	  private boolean estaMuerto;
-
-	  
-	  /**
-	   * El atributo numeroBalas contiene un valor que indica la cantidad de
-	   * balas que tiene.
-	   */
-      private int numeroBalas;
-      
-      
-      
-      public boolean isEstaMuerto() {
-		return estaMuerto;
-	}
-
+	private boolean estaMuerto;
+	/**
+	 * Atributo que determina el numero de balas que tiene el objeto soldado.
+	 */
+	private int numeroBalas;
 
 
 	public void setEstaMuerto(boolean estaMuerto) {
 		this.estaMuerto = estaMuerto;
 	}
 
-
-
 	public int getNumeroBalas() {
 		return numeroBalas;
 	}
-
-
-
+	
+	
+	public boolean isEstaMuerto() {
+		return estaMuerto;
+	}
 	public void setNumeroBalas(int numeroBalas) {
 		this.numeroBalas = numeroBalas;
 	}
 
-
 	/**
-	 * El método puedeDisparar devuelve <b>true</b> si el atributo numeroBalas
-	 * es superior a 0 y <b>false</b> si no cumple la condición.
+	 * Método que devuelve si el objeto puede disparar o no. El método devolvera
+	 * true si el numero de balas es superior a 0 en caso contrario devolvera false
 	 * 
-	 * @return <b>true</b> si el atributo numeroBalas es superior a 0 y
-	 * <b>false</b> si no cumple la condición.
+	 * @return Devolvera true si el numero de balas es mayor que 0 y por el
+	 *         contrario devolvera false si es menor o igual a 0.
 	 */
 	public boolean puedeDisparar() {
 
-                    if(this.numeroBalas > 0) {
+		if (this.numeroBalas > 0) {
 
-                                  return true;
+			return true;
+		}
 
-                    }                          
+		return false;
+	}
 
-                    return false;
-
-      }
-
-     
 	/**
-	 * El método resta 1 el valor del atributo numeroBalas de este soldado y
-	 * cambia el valor del atributo estaMuerto del objeto Soldado introducido
-	 * por parámetro a true.
+	 * Método que permite disparar al objeto. Disminuira el numero de balas y
+	 * establecerá el atributo estaMuerto a true del objeto pasado por parámetro
 	 * 
-	 * @param <b>sol</b> objeto Soldado
+	 * @param sol Objeto pasado por parámetro
 	 */
-      public void disparar(Soldado sol) {
+	public void disparar(Soldado sol) {
 
-                    this.numeroBalas--;
+		this.numeroBalas--;
+		
+		sol.estaMuerto = true;
+	
+	}
 
-                    sol.estaMuerto = true;
-
-      }
 }
