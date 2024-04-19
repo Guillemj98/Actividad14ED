@@ -165,10 +165,25 @@ public class MainClases {
 		// boolean resultadoEstaMuerto = true;
 		Soldado s3 = new Soldado();
 		Soldado soldado1 = new Soldado();
-		numeroBalas = 2;
-		int resultadoBalas = 1;
-		s3.setNumeroBalas(numeroBalas);
-		boolean resultadoEstaMuerto = true;
+		int balas4 = 2;
+		int resultadoBalasEsperado = 1;
+		boolean resultadoEsperadoSolEstaMuerto = true;	
+		s3.setNumeroBalas(balas4);
+		soldado1.setEstaMuerto(false);	
+		s3.disparar(soldado1);	
+		int resultadoBalasObtenido = s3.getNumeroBalas();
+		boolean resultadoObtenidoSolEstaMuerto = soldado1.isEstaMuerto();		
+		if(resultadoBalasEsperado == resultadoBalasObtenido) {
+			if(resultadoEsperadoSolEstaMuerto == resultadoObtenidoSolEstaMuerto) {
+				System.out.println("Prueba 1 disparar(): -->OK");
+				
+			}
+			else {
+				System.out.println("Prueba 1 disparar(): -->KO");
+			}
+		}else {
+			System.out.println("Prueba 1 disparar(): -->KO");
+		}
 		
 		// Prueba 2:
 		// int numeroBalas = 0;
@@ -176,6 +191,26 @@ public class MainClases {
 		// boolean resultadoEstaMuerto = true;
 		Soldado s4 = new Soldado();
 		Soldado soldado2 = new Soldado();
+		int balas5 = 2;
+		resultadoBalasEsperado = 1;
+		resultadoEsperadoSolEstaMuerto = true;	
+		s4.setNumeroBalas(balas4);
+		soldado1.setEstaMuerto(false);	
+		s4.disparar(soldado1);	
+		resultadoBalasObtenido = s4.getNumeroBalas();
+		resultadoObtenidoSolEstaMuerto = soldado1.isEstaMuerto();		
+		if(resultadoBalasEsperado == resultadoBalasObtenido) {
+			if(resultadoEsperadoSolEstaMuerto == resultadoObtenidoSolEstaMuerto) {
+				System.out.println("Prueba 2 disparar(): -->OK");
+				
+			}
+			else {
+				System.out.println("Prueba 2 disparar(): -->KO");
+			}
+		}else {
+			System.out.println("Prueba 2 disparar(): -->KO");
+		}
+		
 	}
 
 }
