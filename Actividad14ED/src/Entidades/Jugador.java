@@ -73,10 +73,9 @@ public class Jugador {
 	 */
 	public boolean estaExpulsado() {
 		boolean expulsado = false;
-		if (numeroTarjetasAmarillas == 2) {
+		if (numeroTarjetasAmarillas >= 2) {
 			expulsado = true;
-		}
-		if (numeroTarjetasRojas == 1) {
+		} else if (numeroTarjetasRojas >= 1) {
 			expulsado = true;
 		}
 		return expulsado;
